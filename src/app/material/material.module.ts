@@ -3,16 +3,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
-const MaterialComponents = [
+
+const material = [
   MatButtonModule,
   MatIconModule,
   MatCheckboxModule,
-  MatCardModule
+  MatCardModule,
+  MatToolbarModule
 ];
 
 @NgModule({
-  imports: [MaterialComponents],
-  exports: [MaterialComponents]
+  imports: [material],
+  exports: [material]
 })
 export class MaterialModule { }
