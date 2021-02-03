@@ -1,6 +1,19 @@
-<div class="todo-item">
-  <mat-checkbox>{{ todo.title }}</mat-checkbox>
-  <button mat-mini-fab color="warn" aria-label="button with a delete icon">
-    <mat-icon>delete</mat-icon>
-  </button>
+<div>
+  <div class="todo-item">
+    <mat-checkbox
+        [ngClass]="setClasses()"
+        (change)="onToggle(paramTodo)"
+    >
+      {{ paramTodo.title }}
+    </mat-checkbox>
+    
+    <button
+        mat-mini-fab color="warn"
+        aria-label="button with a delete icon"
+        (click)="onDelete(paramTodo)"
+    >
+      <mat-icon>delete</mat-icon>
+    </button>
+  </div>
+  <hr />
 </div>

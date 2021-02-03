@@ -1,4 +1,17 @@
-<mat-card>
-  <app-todo-item *ngFor="let todo of todos" [todo]="todo">
-  </app-todo-item>
-</mat-card>
+<div>
+  <div class="container">
+    <app-add-todo
+      (addTodo)="addTodo($event)"
+    >
+    </app-add-todo>
+
+    <mat-card>
+      <app-todo-item
+        *ngFor="let todo of todos"
+        [paramTodo]="todo"
+        (deleteTodo)="deleteTodo($event)"
+      >
+      </app-todo-item>
+    </mat-card>
+  </div>
+</div>
