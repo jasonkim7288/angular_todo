@@ -25,7 +25,7 @@ export class TodosComponent implements OnInit {
 
   addTodo(todo:Todo):void {
     this.todoService.addTodo(todo).subscribe(todo => {
-      this.todos.push(todo);
+      this.todos.unshift(todo);
     });
   }
 }

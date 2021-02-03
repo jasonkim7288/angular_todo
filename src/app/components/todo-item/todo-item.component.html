@@ -3,10 +3,11 @@
     <mat-checkbox
         [ngClass]="setClasses()"
         (change)="onToggle(paramTodo)"
+        [checked]="paramTodo.completed"
     >
       {{ paramTodo.title }}
     </mat-checkbox>
-    
+
     <button
         mat-mini-fab color="warn"
         aria-label="button with a delete icon"
