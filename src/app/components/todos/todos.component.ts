@@ -25,7 +25,13 @@ export class TodosComponent implements OnInit {
 
   addTodo(todo:Todo):void {
     this.todoService.addTodo(todo).subscribe(todo => {
+      todo.id = this.getUniqueId();
       this.todos.unshift(todo);
     });
+  }
+
+  getUniqueId():number {
+    const retVal:number =  this.todos.reduce((acc, todo) => (acc <= todo.id) ? (todo.id + 1) : acc, 0);
+    return retVal;
   }
 }
